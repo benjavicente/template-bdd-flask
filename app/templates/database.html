@@ -1,0 +1,17 @@
+<!-- Loop for each id, name of the database list returned by psql with flask templates -->
+<!DOCTYPE html>
+<head>
+  <title>Database</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+
+<h1>Database</h1>
+
+<ul>
+  {% for id, name in rows %}
+    <li>{{ name }} con id {{ id }}</li>
+  {% endfor %}
+</ul>
+
+</body>
