@@ -8,4 +8,4 @@ RUN yes | /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends postgresql-client-16
 
-RUN pip3 --disable-pip-version-check --no-cache-dir install Flask psycopg[binary]
+RUN pip3 --disable-pip-version-check --no-cache-dir install Flask psycopg[binary] gunicorn

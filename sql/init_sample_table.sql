@@ -1,11 +1,12 @@
 -- Crea una tabla de ejemplo
-CREATE TABLE IF NOT EXISTS sample_table (
-    id INT PRIMARY KEY,
+DROP TABLE sample_table;
+CREATE TABLE sample_table (
+    id SERIAL PRIMARY KEY,
     name VARCHAR(100)
 );
 
-INSERT INTO sample_table (id, name) VALUES (1, 'Alice');
-INSERT INTO sample_table (id, name) VALUES (2, 'Bob');
-INSERT INTO sample_table (id, name) VALUES (3, 'Charlie');
-INSERT INTO sample_table (id, name) VALUES (4, 'David');
-INSERT INTO sample_table (id, name) VALUES (5, 'Eve');
+INSERT INTO sample_table (name) VALUES ('Alice');
+INSERT INTO sample_table (name) VALUES ('Bob');
+INSERT INTO sample_table (name) VALUES ('Charlie');
+INSERT INTO sample_table (name) VALUES ('David');
+INSERT INTO sample_table (name) VALUES ('Eve');
